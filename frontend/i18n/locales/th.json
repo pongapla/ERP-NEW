@@ -1,0 +1,42 @@
+{
+  "common": {
+    "search": "ค้นหา",
+    "logout": "ออกจากระบบ",
+    "profile": "โปรไฟล์",
+    "changePassword": "เปลี่ยนรหัสผ่าน"
+  },
+  "menu": {
+    "dashboard": "แดชบอร์ด",
+    "purchasing": "จัดซื้อ",
+    "sales": "ขาย",
+    "inventory": "คลังสินค้า",
+    "planning": "วางแผน",
+    "production": "ผลิต",
+    "qualityControl": "ควบคุมคุณภาพ",
+    "maintenance": "ซ่อมบำรุง",
+    "accounting": "บัญชี",
+    "reports": "รายงาน",
+    "masterData": "ข้อมูลหลัก",
+    "settings": "ตั้งค่า"
+  },
+  "header": {
+    "company": "บริษัท ตัวอย่าง จำกัด",
+    "searchPlaceholder": "ค้นหาเมนู / เลขที่เอกสาร / สินค้า ...",
+    "administrator": "ผู้ดูแลระบบ"
+  },
+  "dashboard": {
+    "title": "แดชบอร์ด",
+    "hello": "สวัสดีครับ Pong",
+    "welcome": "ยินดีต้อนรับสู่ระบบ ERP จัดการธุรกิจของคุณให้ง่ายขึ้นในที่เดียว",
+    "quote": "ควบคุมงานได้ดี ธุรกิจเดินหน้าได้ไกลกว่า",
+    "pendingPr": "PR รออนุมัติ",
+    "returnedPr": "PR ถูกส่งกลับ",
+    "pendingPo": "PO รอออก",
+    "pendingGr": "รอรับของ (GR)",
+    "overdueDocuments": "เอกสารเลยกำหนด",
+    "purchasingSummary": "สรุปการจัดซื้อ",
+    "poStatus": "สัดส่วนสถานะ PO",
+    "recentDocuments": "เอกสารล่าสุด",
+    "followUp": "แจ้งเตือน / สิ่งที่ต้องติดตาม"
+  }
+}

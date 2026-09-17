@@ -1,0 +1,42 @@
+{
+  "common": {
+    "search": "Search",
+    "logout": "Logout",
+    "profile": "Profile",
+    "changePassword": "Change Password"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "purchasing": "Purchasing",
+    "sales": "Sales",
+    "inventory": "Inventory",
+    "planning": "Planning",
+    "production": "Production",
+    "qualityControl": "Quality Control",
+    "maintenance": "Maintenance",
+    "accounting": "Accounting",
+    "reports": "Reports",
+    "masterData": "Master Data",
+    "settings": "Settings"
+  },
+  "header": {
+    "company": "Example Company Limited",
+    "searchPlaceholder": "Search menu / document number / item ...",
+    "administrator": "Administrator"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "hello": "Hello Pong",
+    "welcome": "Welcome to ERP. Manage your business more easily in one place.",
+    "quote": "Better control, better business growth.",
+    "pendingPr": "Pending PR",
+    "returnedPr": "Returned PR",
+    "pendingPo": "Pending PO",
+    "pendingGr": "Pending GR",
+    "overdueDocuments": "Overdue Documents",
+    "purchasingSummary": "Purchasing Summary",
+    "poStatus": "PO Status",
+    "recentDocuments": "Recent Documents",
+    "followUp": "Alerts / Follow-up"
+  }
+}
