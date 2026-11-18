@@ -1,64 +1,87 @@
-# Nuxt Starter Template
+# ERP-NEW · Frontend
+### Nuxt 4 · Vue · TypeScript · Nuxt UI
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+The **ERP-NEW frontend** is a work-in-progress web interface for a modular business ERP system. It currently contains the initial login flow, shared layout and dashboard prototype.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+> **Development status:** Screens are under construction. Login is a **mock flow** and dashboard figures are **sample data**. This repository is not a deployed or authenticated production ERP frontend.
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+[![Nuxt](https://img.shields.io/badge/Nuxt-4-00DC82?style=flat-square)](https://nuxt.com/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?style=flat-square)](https://www.typescriptlang.org/)
+[![UI](https://img.shields.io/badge/UI-Nuxt%20UI-00DC82?style=flat-square)](https://ui.nuxt.com/)
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
+## Current screens and structure
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+| Area | Description | Status |
+| --- | --- | --- |
+| `/login` | Login form and navigation to dashboard | Mock sign-in only |
+| `/dashboard` | ERP summary cards, purchasing overview, PO status and recent activity panels | Prototype / example values |
+| Shared layout | Sidebar, header and page container | UI foundation |
+| Authorization | Permission-filtered navigation and API access control | Planned; not wired to live authentication |
 
-## Quick Start
+Relevant files:
 
-```bash [Terminal]
-npm create nuxt@latest -- -t ui
+```text
+app/
+  app.vue
+  pages/
+    index.vue                  # Existing Nuxt starter landing page
+    login.vue                  # Mock login
+    dashboard/index.vue        # ERP dashboard prototype
+  layouts/default.vue
+  components/
+    dashboard/                # Dashboard widgets
+    layout/                   # Shared navigation and header
 ```
 
-## Deploy your own
+**Important:** `app/pages/index.vue` still contains the upstream Nuxt UI starter landing page; it is not a custom ERP homepage yet.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
+## Tech stack
 
-## Setup
+- Nuxt 4 / Vue
+- TypeScript
+- Nuxt UI and Tailwind CSS
+- `@nuxtjs/i18n`
+- pnpm
 
-Make sure to install the dependencies:
+## Local development
 
 ```bash
+cd frontend
 pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
 pnpm dev
 ```
 
-## Production
+Open the localhost address shown by Nuxt. The interface currently uses mock data and does not require a running ERP database for UI preview.
 
-Build the application for production:
+Useful checks:
 
 ```bash
+pnpm lint
+pnpm typecheck
 pnpm build
 ```
 
-Locally preview production build:
+These commands describe how to run checks; **no passing CI or deployment result is claimed** in this README.
 
-```bash
-pnpm preview
-```
+## Design documentation
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [Dashboard UI specification](../docs/ERP-NEW_DASHBOARD_UI_SPEC.md)
+- [Frontend structure and intended authorization flow](../docs/ERP-NEW_FRONTEND_STRUCTURE.md)
+- [User, role, permission and multi-company model](../docs/USER_MODULE_1.0.md)
+- [Purchasing workflow](../docs/Purchasing_Status_Workflow.md)
 
-## Renovate integration
+## Next steps
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+- Replace the starter landing page with an ERP-specific entry experience.
+- Connect login/session handling to the backend.
+- Connect dashboard widgets to real, authorized API endpoints.
+- Apply permission-based menu visibility **and** independent server-side authorization.
+- Add integration tests, accessibility checks and error handling.
+
+## Credits
+
+The initial frontend was bootstrapped from the [Nuxt UI starter template](https://github.com/nuxt-ui-templates/starter). Nuxt UI is developed by the Nuxt team. The upstream project is used as a starting point; ERP-specific screens and specifications are part of this personal project.
+
+---
+
+[← Back to ERP-NEW overview](../README.md)
